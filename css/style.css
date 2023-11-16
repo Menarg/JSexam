@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to right, #020161fe, #040021);
+}
+
+.planet {
+    height: 2em;
+    width: 2em;
+    background-color: black;
+}
+
+.page {
+    height: 100%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.Solen {
+    height: 40em;
+    width: 8em;
+    border-radius: 50%;
+    position: relative;
+    right: 4em;
+    background-image: radial-gradient(yellow, orange);
+}
