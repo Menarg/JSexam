@@ -43,9 +43,13 @@ function generateInfoPage(planet) { // Generates the info pages for each planet
     let planetInfo = planet;
 
     let info = '';
-    let moons = '';
-
+    
     for (i = 0; i < planet.bodies.length; i++) {
+        let moons = '';
+        for (j = 0; j < planet.bodies[i].moons.length; j++) { //en liten loop bara för månar!
+            moons = moons + ' ' + planet.bodies[i].moons[j];
+        }
+
         info = info + `
         <article id="${planet.bodies[i].name}Info" class="infopage hidden ${planetInfo.bodies[i].name}Info">
             <h1>${planetInfo.bodies[i].name}</h1> 
@@ -75,9 +79,7 @@ function generateInfoPage(planet) { // Generates the info pages for each planet
             </article>
         </article>
         `;
-        for (j = 0; j < planet.bodies[i].moons.length; j++) {
-            moons = moons + ' ' + planet.bodies[i].moons[j];
-        }
+        
         planetInfoElem.innerHTML = info;
     }
 
