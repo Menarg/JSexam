@@ -31,7 +31,7 @@ p {
 .wrapper {
     height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(to right, #020161fe, #040021);
+    background-image: linear-gradient(to right, #16154dfe, #040021);
 }
 
 .page {
@@ -42,16 +42,17 @@ p {
 }
 
 .infopage {
-    height: 100%;
+    height: 100vh;
     padding-left: 25%;
     padding-right: 25%;
     padding-top: 10%;
+    flex-wrap: wrap;
 }
 
 .subinfo {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 1.5em;
+    margin-top: 2em;
     margin-bottom: 1.5em;
     padding-top: 1.5em;
     padding-bottom: 1.5em;

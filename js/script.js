@@ -43,10 +43,11 @@ function generateInfoPage(planet) { // Generates the info pages for each planet
     let planetInfo = planet;
 
     let info = '';
+    let moons = '';
 
     for (i = 0; i < planet.bodies.length; i++) {
         info = info + `
-        <article id="${planet.bodies[i].name}Info" class="infopage hidden ${planetInfo.bodies[i].name}Info" 
+        <article id="${planet.bodies[i].name}Info" class="infopage hidden ${planetInfo.bodies[i].name}Info">
             <h1>${planetInfo.bodies[i].name}</h1> 
             <h2>${planetInfo.bodies[i].latinName}</h2>
             <p>${planetInfo.bodies[i].desc}</p>
@@ -70,10 +71,13 @@ function generateInfoPage(planet) { // Generates the info pages for each planet
             </section>
             <article class="moons">
                 <h3>MÅNAR</h3>
-                <p>${planetInfo.bodies[i].moons}</p>
+                <p class="writeMoons">${moons}</p>
             </article>
         </article>
-        `; //av någon anledning avslutas inte h1:an??
+        `;
+        for (j = 0; j < planet.bodies[i].moons.length; j++) {
+            moons = moons + ' ' + planet.bodies[i].moons[j];
+        }
         planetInfoElem.innerHTML = info;
     }
 
@@ -95,14 +99,14 @@ function addEventListeners() { // adds events listeners to the planet figures an
 
     // Selectors for the info pages for the planets
     let SolenInfoElem = document.querySelector('#SolenInfo');
-    let MerkuriusInfoElem = document.querySelector('#SolenInfo');
-    let VenusInfoElem = document.querySelector('#SolenInfo');
-    let JordenInfoElem = document.querySelector('#SolenInfo');
-    let MarsInfoElem = document.querySelector('#SolenInfo');
-    let JupiterInfoElem = document.querySelector('#SolenInfo');
-    let SaturnusInfoElem = document.querySelector('#SolenInfo');
-    let UranusInfoElem = document.querySelector('#SolenInfo');
-    let NeptunusInfoElem = document.querySelector('#SolenInfo');
+    let MerkuriusInfoElem = document.querySelector('#MerkuriusInfo');
+    let VenusInfoElem = document.querySelector('#VenusInfo');
+    let JordenInfoElem = document.querySelector('#JordenInfo');
+    let MarsInfoElem = document.querySelector('#MarsInfo');
+    let JupiterInfoElem = document.querySelector('#JupiterInfo');
+    let SaturnusInfoElem = document.querySelector('#SaturnusInfo');
+    let UranusInfoElem = document.querySelector('#UranusInfo');
+    let NeptunusInfoElem = document.querySelector('#NeptunusInfo');
 
     SolenElem.addEventListener('click' , () => {
         planetFigureElem.classList.toggle('hidden');
@@ -211,7 +215,7 @@ function addEventListeners() { // adds events listeners to the planet figures an
         NeptunusInfoElem.classList.toggle('hidden');
         titleElem.classList.toggle('hidden');
     });
-    // bara Solen som funkar??
+    // oavsett vart jag klickar tar den bara upp Solen??
 }
 
 KEY(); //GO!
