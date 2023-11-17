@@ -3,24 +3,71 @@
     margin: 0;
 }
 
+h1 {
+    font-size: 5em;
+    font-weight: bold;
+    color: white;
+}
+
+h2 {
+    font-size: 3em;
+    font-weight: lighter;
+    color: yellow;
+    margin-bottom: 1em;
+}
+
+h3 {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-size: 1em;
+    color: white;
+}
+
 .wrapper {
     height: 100vh;
     width: 100vw;
     background-image: linear-gradient(to right, #020161fe, #040021);
 }
 
-.planet {
-    height: 2em;
-    width: 2em;
-    background-color: black;
-}
-
 .page {
-    height: 100%;
     margin-right: 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.infopage {
+    height: 100%;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 10%;
+}
+
+.subinfo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    border-top: white 1px solid;
+    border-bottom: white 1px solid;
+}
+
+.stats {
+    margin-bottom: 1em;
+}
+
+.title {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: end;
+    padding: 2%;
 }
 
 .hidden {
@@ -34,4 +81,60 @@
     position: relative;
     right: 4em;
     background-image: radial-gradient(yellow, orange);
+}
+
+.Merkurius {
+    background-color: gray;
+    height: 0.7em;
+    width: 0.7em;
+    border-radius: 50%;
+}
+
+.Venus {
+    background-color: #b7b6b6;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+}
+
+.Jorden {
+    background-color: #4782d9;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+}
+
+.Mars {
+    background-color: #dc4b31;
+    height: 0.7em;
+    width: 0.7em;
+    border-radius: 50%;
+}
+
+.Jupiter {
+    background-color: #d47b51;
+    height: 8em;
+    width: 8em;
+    border-radius: 50%; 
+}
+
+.Saturnus {
+    background-color: #cfc676;
+    height: 7em;
+    width: 7em;
+    border-radius: 50%; 
+}
+
+.Uranus {
+    background-color: #b9ddff;
+    height: 3em;
+    width: 3em;
+    border-radius: 50%; 
+}
+
+.Neptunus {
+    background-color: #8aa0d2;
+    height: 3em;
+    width: 3em;
+    border-radius: 50%; 
 }
